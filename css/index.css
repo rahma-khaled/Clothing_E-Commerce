@@ -1,0 +1,700 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing:border-box;
+   font-family:'Times New Roman', Times, serif;
+   text-transform: capitalize;
+}
+
+.header{
+   width: 100%;
+   height: 55px;
+   background-color: rgb(229, 229, 229);
+   position: fixed;
+   overflow: none;
+   box-shadow: 3px 3px 5px rgb(191, 191, 191);
+   z-index: 10;
+}
+
+.header .logo{
+   float: left;
+   margin-left: 50px;
+}
+
+.header img{
+   width: 100px;
+   height: 55px;
+}
+
+.header .name-logo{
+   font-weight: bold;
+   font-size: 17px;
+   position: absolute;
+   top: 15px;
+   left: 120px;
+   font-family: "Lobster", serif;
+}
+
+.header ul{
+   float: right;
+   list-style: none;
+   margin-right: 150px;
+   margin-top: 15px;
+   font-size: 17px;
+}
+
+.header ul li{
+   display: inline-block;
+   margin-left: 25px;
+}
+
+
+.header ul li a{
+   text-decoration: none;
+   color: #000;
+}
+
+
+.header ul li a:hover{
+   color: rgb(24, 133, 46);
+}
+
+
+.header ul li .active{
+   color:  rgb(24, 133, 46);
+}
+
+
+.home .container{
+   width: 100%;
+   height: 100vh;
+   background-image: url(../images/tt.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.home .container .hero{
+   position: absolute;
+   top: 200px;
+   left: 150px;
+}
+
+
+.home .container .hero .offer{
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.home .container .hero .save{
+   margin: 15px 0px;
+   color: rgb(118, 118, 118);
+}
+
+
+.home .container .hero .title,
+.home .container .hero .description{
+   font-size: 40px;
+   font-weight: bold;
+}
+
+.home .container .hero .description{
+   color: rgb(55, 123, 69);
+}
+
+.home .container .hero button{
+   border: none;
+   background-image: url(../images/button.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 200px;
+   height: 50px;
+   background-color: rgba(255, 255, 255, 0);
+   margin-top: 15px;
+   font-size: 15px;
+   color:rgb(55, 123, 69);
+   padding-bottom: 10px;
+   cursor: pointer;
+   font-weight: 600px;
+} 
+
+.home .container .hero button:hover{
+   width: 230px;
+   height: 60px;
+   transition: 0.5s ease-in-out;
+}
+
+
+.services {
+   width: 90%;
+   margin: 50px auto;
+   overflow: auto;
+   padding: 15px 10px;
+}
+
+.service{
+   width: 12%;
+   height: 160px;
+   float: left;
+   margin-left: 4%;
+   text-align: center;
+   padding: 10px;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.service:hover{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.service img{
+   width: 95%;
+   height: 90px;
+}
+
+.service p{
+   margin:15px 0px ;
+   text-transform: capitalize;
+   padding: 3px;
+   font-weight: bold;
+   color: rgb(55, 123, 69);
+   border-radius: 5px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.f1 .name_feature{
+   background-color: rgb(232, 245, 246);
+
+}
+
+.f2 .name_feature{
+   background-color: rgb(243, 229, 236);
+}
+
+.f3 .name_feature{
+   background-color: rgb(236, 248, 231);
+}
+
+.f4 .name_feature{
+   background-color: rgb(233, 231, 243);
+}
+
+.f5 .name_feature{
+   background-color: rgb(241, 221, 240);
+}
+
+.f6 .name_feature{
+   background-color: rgb(250, 228, 228);
+}
+
+.title{
+   text-align: center;
+   font-size: 35px;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+.offer{
+   text-align: center;
+   font-size: 15px;
+   color: rgb(101, 101, 101);
+   margin: 15px 0px;
+}
+
+.products{
+   width: 90%;
+   margin: 50px auto;
+   overflow: auto;
+}
+
+.products .item{
+   width: 20%;
+   margin: 28px;
+   float: left;
+   text-align: center;
+   padding: 10px;
+   border: 0.1px solid rgb(0, 0, 0);
+   border-radius: 15px;
+   overflow: auto;
+}
+
+
+
+.products .item:hover{
+   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.577);
+   transition: 0.5s ease-in-out;
+}
+
+.products .item:hover .title_item{
+   color:  rgb(55, 123, 69);
+}
+
+
+.products .item img{
+   width: 100%;
+   height: 200px;
+   border-radius: 15px;
+}
+
+
+
+.products .item .brand{
+   font-size: 10px;
+   color:rgb(149, 149, 149);
+   text-transform: capitalize;
+}
+
+
+.products .item .title_item{
+   font-size: 15px;
+   text-transform: capitalize;
+}
+
+
+.products .item i{
+   color: goldenrod;
+   font-size: 10px;
+}
+
+.products .item .cart{
+   width: 30px;
+   height: 30px;
+   float:right;
+   padding: 7px;
+   border-radius: 50%;
+   background-color: rgb(224, 224, 224);
+   margin-top: 20px;
+}
+
+.products .item .cart i{
+   color: rgb(55, 123, 69);
+   font-size: 15px;
+}
+
+.products .item .price{
+   float: left;
+   color: goldenrod;
+   font-weight: bold;
+   margin-top: 20px ;
+   margin-left: 10px;
+}
+
+
+.repair_services{
+   width: 100%;
+   height: 50vh;
+   background-image: url(../images//background_1004886.jpg);
+   background-size: cover;
+   position: relative;
+   margin-bottom: 50px;
+}
+
+
+.repair_services h6{
+   position: absolute;
+   font-size: 17px;
+   left: 450px;
+   top: 50px;
+}
+
+
+
+.repair_services p{
+   font-size: 30px;
+   font-weight: bold;
+   position: absolute;
+   left: 250px;
+   top: 100px;
+}
+
+
+.repair_services span{
+   color: rgb(55, 123, 69);
+}
+
+
+
+.repair_services button{
+   position: absolute;
+   left: 430px;
+   top: 150px;
+   margin-top: 20px;
+   border: none;
+   background-image: url(../images/button.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 150px;
+   height: 40px;
+   background-color: rgba(255, 255, 255, 0);
+   font-size: 15px;
+   padding-bottom: 5px;
+   cursor: pointer;
+}
+
+
+.new_collection .products{
+   margin-top: 50px;
+}
+
+
+.discounts{
+   width: 80%; 
+   overflow: auto;
+   margin: auto;
+}
+
+
+.discounts .d1{
+   width: 48%;
+   height: 300px;
+   margin-right: 2%;
+   background-image: url(../images/d1.jpg);
+   background-size: cover;
+   background-position: center;
+   float: left;
+   text-align: center;
+   padding-top: 100px;
+   font-size: 18px;
+   border: 1px solid rgba(0, 0, 0, 0.329);
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.41);
+   color: rgb(255, 255, 255);
+}
+
+
+.discounts button{
+   background-color: rgba(255, 255, 255, 0);
+   width: 100px;
+   height: 35px;
+   margin-top: 20px;
+   border-radius: 10px;
+}
+
+
+.discounts .d1 button{
+   border: none;
+   background-color: rgb(55, 123, 69);
+   color: rgb(255, 255, 255);
+}
+
+
+.discounts .d2 button{
+   border: 2px solid rgb(255, 255, 255);
+   color: rgb(255, 255, 255);
+}
+
+
+
+.discounts .d2{
+   width: 48%;
+   height: 300px;
+   background-image: url(../images/d2.jpg);
+   background-size: cover;
+   background-position: center;
+   float: right;
+   margin-right: 10px;
+   text-align: center;
+   padding-top: 100px;
+   font-size: 18px;
+   border: 1px solid rgba(0, 0, 0, 0.329);
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.41);
+   color: rgb(255, 255, 255);
+}
+
+
+.add_dis{
+   width: 80%;
+   margin: auto;
+   margin-top: 30px;
+   overflow: auto;
+   margin-bottom: 50px;
+}
+
+
+.add_dis .d1{
+   width: 31%;
+   height: 200px;
+   background-image: url(../images/add1.jpg);
+   background-size: cover;
+   float: left;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.51);
+   text-align: center;
+   color: #ffffff;
+   padding-top: 80px;
+}
+
+.add_dis .d2{
+   width: 31%;
+   height: 200px;
+   background-image: url(../images/add2.jpg);
+   background-size: cover;
+   background-position: center;
+   margin: 0px 32px;
+   float: left;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.51);
+   color: #ffffff;
+   text-align: center;
+   padding-top: 80px;
+}
+
+.add_dis .d3{
+   width: 31%;
+   height: 200px;
+   background-image: url(../images/add3.jpg);
+   background-size: cover;
+   background-position: center;
+   float: left;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.51);
+   color: #ffffff;
+   text-align: center;
+   padding-top: 80px;
+}
+
+
+.add_dis h3{
+   text-transform: uppercase;
+   margin-bottom: 8px;
+}
+
+
+
+.sign{
+   background-image: url(../images/pink.jpg);
+   width: 100%;
+   height: 30vh;
+   margin-bottom: 50px;
+   padding-top:50px;
+   padding-left: 80px;
+   position: relative;
+}
+
+
+.sign h3{
+   margin-bottom: 15px;
+   color:rgb(55, 123, 69);
+   margin-left: 95px;
+   font-size: 20px;
+   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+
+.sign p{
+   color:rgb(255, 255, 255);
+   font-weight: bold;
+}
+
+
+.sign span{
+   color: rgb(55, 123, 69);
+   font-size: 18px;
+   font-weight: bold;
+   text-shadow:02px 0px 0px rgba(0, 0, 0, 0);
+}
+
+
+
+.sign form{
+   position: absolute;
+   right:100px;
+   top:60px;
+}
+
+.sign form input{
+   width: 300px;
+   height: 40px;
+   padding-left:10px ;
+   border: none;
+   border-radius: 5px;
+}
+
+.sign form button{
+   width: 100px;
+   height: 40px;
+   border: none;
+   background-color: rgb(55, 123, 69);
+   color: #ffffff;
+   border-radius:5px;
+}
+
+
+
+.footer{
+   overflow: auto;
+   position: relative;
+   margin-bottom: 20px;
+}
+
+
+.footer .logo{
+   float: left;
+   width: 35%;
+   height: 100px;
+   position: relative;
+}
+
+.footer .logo img{
+   width: 150px;
+   height: 100px;
+}
+
+
+.footer .logo span{
+   position: absolute;
+   top: 30px;
+   left: 100px;
+   font-weight: bold;
+   font-size: 20px;
+   font-family: "Lobster", serif;
+}
+
+
+.footer .fabout{
+   float: left;
+   width: 15%;
+   margin: 0px 15px;
+}
+
+
+.footer .fabout h4,
+.footer .my_acc h4,
+.footer .install h4,
+.footer .fcontact h4{
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+
+
+.footer .fabout p,
+.footer .my_acc p,
+.footer .install p,
+.footer .fcontact p{
+   margin-bottom: 10px;
+   font-size: 14px;
+   color: #606060;
+}
+
+
+.footer .my_acc{
+   float: left;
+   width: 15%;
+   margin-right: 15px;
+}
+
+
+.footer .install{
+   float: left;
+   width: 31%;
+}
+
+
+
+.footer .install .install_with{
+   width: 100%;
+   overflow: auto;
+   margin: 15px 0px;
+}
+
+
+.footer .install .apple{
+   width: 49%;
+   height: 50px;
+   border: 2px solid rgb(55, 123, 69);
+   border-radius: 5px;
+   float: left;
+   text-align: center;
+   padding: 12px 0px;
+   position: relative;
+}
+
+
+.footer .install .google{
+   width: 49%;
+   height: 50px;
+   border: 2px solid rgb(55, 123, 69);
+   border-radius: 5px;
+   float: right;
+   text-align: center;
+   padding: 12px 0px;
+   position: relative;
+}
+
+
+.footer .install .google i{
+   font-size: 25px;
+   position: absolute;
+   top: 10px;
+   left: 30px;
+}
+
+
+.footer .install .apple i{
+   font-size: 25px;
+   position: absolute;
+   top: 8px;
+   left: 41px;
+}
+
+
+.footer .install .install_with span{
+   font-size: 15px;
+}
+
+
+.footer .install .payment{
+   width: 100%;
+}
+
+
+.footer .install img{
+   width: 20%;
+   height: 50px;
+   margin-right: 10px;
+}
+
+
+.footer .fcontact{
+   float: left;
+   width: 35%;
+   margin-right: 15px;
+   position: absolute;
+   top: 100px;
+   left: 0px;
+   margin-left: 35px;
+}
+
+
+.footer .fcontact span{
+   font-size: 16px;
+   color: #000;
+}
+
+
+.footer .follow{
+   margin-left:35px ;
+   float: left;
+   margin-top: 20px;
+}
+
+.footer .follow h4{
+   font-size: 18px;
+}
+
+
+.footer .follow .icons{
+   margin-top: 10px;
+   font-size: 19px;
+}
+
+
+.footer .follow .icons i{
+   margin: 0 5px;
+}
+
+
+
+
+
+
