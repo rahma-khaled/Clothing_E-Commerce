@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Updating Modiva Products...</title>
+</head>
+
+<body style="font-family:sans-serif; text-align:center; padding-top:50px;">
+    <h1>Updating Firestore Products to "Product-Only" Aesthetics...</h1>
+    <div id="status">Connecting to Firebase...</div>
+
+    <script type="module">
+        import { db } from './js/firebase-config.js';
+        import { collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        const status = document.getElementById('status');
+
+        const newImages = {
+            "Classic Beige Trench": "images/products/trench.png",
+            "Rebel Leather Jacket": "images/products/leather-jacket.png",
+            "Scarlet Evening Gown": "images/products/red-gown.png",
+            "Floral Meadow Dress": "images/products/floral-dress.png",
+            "Urban Knit Turtleneck": "images/products/knit-sweater.png",
+            "Midnight Lace Cami": "images/products/lace-cami.png",
+            "Emerald Silk Blouse": "images/products/silk-blouse.png",
+            "Soft Cable Knit": "images/products/cable-knit.png"
+        };
+
+        async function update() {
+            try {
+                const querySnapshot = await getDocs(collection(db, "products"));
+                let count = 0;
+
+                for (const docSnap of querySnapshot.docs) {
+                    const data = docSnap.data();
+                    const newPath = newImages[data.name];
+
+                    if (newPath) {
+                        await updateDoc(doc(db, "products", docSnap.id), {
+                            imageUrl: newPath
+                        });
+                        count++;
+                    }
+                }
+                status.innerHTML = `<span style="color:green;">✓ Successfully updated ${count} products to use Hosted Flat-Lay images!</span>`;
+            } catch (error) {
+                console.error(error);
+                status.innerHTML = `<span style="color:red;">Error: ${error.message}</span>`;
+            }
+        }
+
+        update();
+    </script>
+</body>
+
+</html>

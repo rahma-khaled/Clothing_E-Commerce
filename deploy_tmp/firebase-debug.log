@@ -1,0 +1,126 @@
+[debug] [2026-04-03T02:22:07.144Z] ----------------------------------------------------------------------
+[debug] [2026-04-03T02:22:07.147Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting --project modiva-store --non-interactive
+[debug] [2026-04-03T02:22:07.147Z] CLI Version:   14.16.0
+[debug] [2026-04-03T02:22:07.148Z] Platform:      win32
+[debug] [2026-04-03T02:22:07.148Z] Node Version:  v22.15.0
+[debug] [2026-04-03T02:22:07.148Z] Time:          Fri Apr 03 2026 04:22:07 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-04-03T02:22:07.148Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-03T02:22:07.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-03T02:22:07.368Z] > authorizing via signed-in user (rahmaelhalawany007@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\DEPI\Clothing_E-Commerce\deploy_tmp
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2026-04-03T02:22:07.413Z] Using project from CLI flag: modiva-store
+[debug] [2026-04-03T02:22:07.414Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:07.414Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:07.414Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:22:07.416Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:22:07.416Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:07.906Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:22:07.906Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:07.907Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store [none]
+[debug] [2026-04-03T02:22:08.616Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store 401
+[debug] [2026-04-03T02:22:08.616Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2026-04-03T02:22:08.617Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-04-03T02:22:08.617Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:08.617Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:08.618Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:22:08.619Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:22:08.619Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:08.735Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:22:08.736Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:08.738Z] Request to https://firebase.googleapis.com/v1beta1/projects/modiva-store had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-04-03T02:22:09.171Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/modiva-store had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project modiva-store. Please make sure the project exists and your account has permission to access it.
+[debug] [2026-04-03T02:22:24.524Z] ----------------------------------------------------------------------
+[debug] [2026-04-03T02:22:24.528Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list --json
+[debug] [2026-04-03T02:22:24.529Z] CLI Version:   14.16.0
+[debug] [2026-04-03T02:22:24.530Z] Platform:      win32
+[debug] [2026-04-03T02:22:24.530Z] Node Version:  v22.15.0
+[debug] [2026-04-03T02:22:24.531Z] Time:          Fri Apr 03 2026 04:22:24 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-04-03T02:22:24.532Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-03T02:22:24.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-03T02:22:24.777Z] > authorizing via signed-in user (rahmaelhalawany007@gmail.com)
+[debug] [2026-04-03T02:22:24.782Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:24.782Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:24.782Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:22:24.786Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:22:24.786Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:25.182Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:22:25.183Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:25.183Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-04-03T02:22:25.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 401
+[debug] [2026-04-03T02:22:25.965Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-04-03T02:22:25.966Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-04-03T02:22:25.966Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:25.966Z] Checked if tokens are valid: false, expires at: 1774831640054
+[debug] [2026-04-03T02:22:25.966Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:22:25.967Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:22:25.967Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:26.470Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:22:26.470Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:22:26.472Z] Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-04-03T02:22:26.772Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\DUPLEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2026-04-03T02:23:36.896Z] ----------------------------------------------------------------------
+[debug] [2026-04-03T02:23:36.898Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DUPLEX\AppData\Local\npm-cache\_npx\fd3df764fa080f8d\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --project modiva-store --non-interactive
+[debug] [2026-04-03T02:23:36.899Z] CLI Version:   13.12.0
+[debug] [2026-04-03T02:23:36.899Z] Platform:      win32
+[debug] [2026-04-03T02:23:36.899Z] Node Version:  v22.15.0
+[debug] [2026-04-03T02:23:36.900Z] Time:          Fri Apr 03 2026 04:23:36 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-04-03T02:23:36.900Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-03T02:23:36.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-03T02:23:36.967Z] > authorizing via signed-in user (rahmaelhalawany007@gmail.com)
+[debug] [2026-04-03T02:23:36.967Z] [iam] checking project modiva-store for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-04-03T02:23:36.968Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:23:36.970Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:23:36.970Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:23:37.488Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:23:37.489Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:23:37.489Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/modiva-store:testIamPermissions [none]
+[debug] [2026-04-03T02:23:37.489Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/modiva-store:testIamPermissions x-goog-quota-user=projects/modiva-store
+[debug] [2026-04-03T02:23:37.489Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/modiva-store:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-03T02:23:38.628Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/modiva-store:testIamPermissions 401
+[debug] [2026-04-03T02:23:38.628Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/modiva-store:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2026-04-03T02:23:38.629Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-04-03T02:23:38.630Z] > refreshing access token with scopes: []
+[debug] [2026-04-03T02:23:38.631Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-03T02:23:38.631Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:23:38.737Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-04-03T02:23:38.738Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-03T02:23:38.738Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store [none]
+[debug] [2026-04-03T02:23:39.369Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store 401
+[debug] [2026-04-03T02:23:39.369Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/modiva-store {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2026-04-03T02:23:39.369Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier

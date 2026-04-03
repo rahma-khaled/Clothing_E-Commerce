@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modiva — Premium Fashion Store</title>
+  <meta name="description" content="Modiva — Shop the latest women's fashion. Premium quality, modern style.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Modiva CSS -->
+  <link rel="stylesheet" href="css/modiva.css">
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg modiva-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/modiva-logo-new.png" alt="Modiva Logo">
+        Modiva
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <a id="auth-nav-link" href="login.html" class="nav-link d-flex align-items-center gap-1">
+            <i class="fa-regular fa-user"></i>
+            <span id="auth-nav-text">Sign In</span>
+          </a>
+          <button class="nav-link cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <i class="fa-solid fa-bag-shopping me-1"></i> Cart
+            <span id="cart-badge"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6 hero-content py-5">
+          <div class="hero-tag">✦ New Season Has Arrived</div>
+          <h1>Dress <span>Boldly</span>,<br>Live Beautifully</h1>
+          <p class="my-4">Discover curated fashion that blends elegance with everyday comfort. Up to <strong
+              style="color:var(--gold)">70% off</strong> this season.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="shop.html" class="btn-primary-brand">Shop Now <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            <a href="#featured" class="btn-outline-brand">View Collection</a>
+          </div>
+          <div class="hero-stats mt-5">
+            <div>
+              <div class="hero-stat-value">10k+</div>
+              <div class="hero-stat-label">Customers</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">500+</div>
+              <div class="hero-stat-label">Products</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">4.9★</div>
+              <div class="hero-stat-label">Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="col-lg-6 d-none d-lg-flex align-items-end justify-content-center hero-img-col">
+          <div class="hero-img-wrap">
+            <img src="images/hero-rack.png" alt="Modiva Premium Collection" class="hero-model-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     FEATURE BADGES
+═══════════════════════════════════════════════════ -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-truck-fast"></i></div>
+          <h6>Free Shipping</h6>
+          <p>Orders over $50</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-rotate-left"></i></div>
+          <h6>Easy Returns</h6>
+          <p>30-day policy</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <h6>Secure Payment</h6>
+          <p>100% protected</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
+          <h6>24/7 Support</h6>
+          <p>Always here</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-tag"></i></div>
+          <h6>Best Prices</h6>
+          <p>Price match guarantee</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrap"><i class="fa-solid fa-gift"></i></div>
+          <h6>Gift Cards</h6>
+          <p>For every occasion</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     FEATURED PRODUCTS (Dynamic — from Firestore)
+═══════════════════════════════════════════════════ -->
+  <section class="py-5" id="featured">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-end justify-content-between mb-4 gap-3">
+        <div>
+          <div class="section-label">Curated For You</div>
+          <h2 class="section-title mb-0">Featured Products</h2>
+          <p class="section-sub">Hand-picked styles from our latest collection</p>
+        </div>
+        <a href="shop.html" class="btn btn-outline-success rounded-pill px-4">View All <i
+            class="fa-solid fa-arrow-right ms-1"></i></a>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="category-pills mb-4" id="featured-filter">
+        <button class="pill active" data-cat="all">All</button>
+        <button class="pill" data-cat="sweaters">Sweaters</button>
+        <button class="pill" data-cat="tops">Tops</button>
+        <button class="pill" data-cat="dresses">Dresses</button>
+        <button class="pill" data-cat="outerwear">Outerwear</button>
+      </div>
+
+      <!-- Product Grid (loaded by JS) -->
+      <div id="products-loading" class="products-loading">
+        <div class="spinner-brand"></div>
+        Loading products…
+      </div>
+      <div class="row g-3" id="featured-products-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     PROMO BANNER
+═══════════════════════════════════════════════════ -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="promo-banner"
+            style="min-height:260px; background-image: url('images/d1.jpg'); background-size:cover; background-position:center;">
+            <div style="background:rgba(0,80,30,.6); border-radius:var(--radius); padding:2.5rem; height:100%;">
+              <div class="promo-badge">Crazy Deal</div>
+              <h3 class="fw-800 text-white mb-2">Buy 1 Get 1 Free</h3>
+              <p class="text-white-50 mb-3">The best classic dress is on sale at Modiva</p>
+              <a href="shop.html" class="btn-primary-brand">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="promo-banner"
+            style="min-height:260px; background-image: url('images/d2.jpg'); background-size:cover; background-position:center;">
+            <div style="background:rgba(0,40,80,.6); border-radius:var(--radius); padding:2.5rem; height:100%;">
+              <div class="promo-badge" style="background:rgba(255,255,255,.2); color:#fff;">Spring / Summer</div>
+              <h3 class="fw-800 text-white mb-2">Upcoming Season</h3>
+              <p class="text-white-50 mb-3">The best classic dress is on sale at Modiva</p>
+              <a href="shop.html" class="btn-outline-brand">Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     NEW ARRIVALS (Dynamic — from Firestore)
+═══════════════════════════════════════════════════ -->
+  <section class="py-5 bg-light" id="new-arrivals">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-label">Fresh In</div>
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-sub">Summer collection — new modern design</p>
+      </div>
+      <div id="new-products-loading" class="products-loading">
+        <div class="spinner-brand"></div>
+        Loading…
+      </div>
+      <div class="row g-3" id="new-products-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     CATEGORY BANNERS (Static)
+═══════════════════════════════════════════════════ -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div
+            style="height:220px; background: url('images/add1.jpg') center/cover; border-radius:var(--radius); position:relative; overflow:hidden;">
+            <div
+              style="position:absolute; inset:0; background:rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <h4 class="text-white fw-800 mb-1">Seasonal Sale</h4>
+              <p class="text-white-50 mb-0" style="font-size:.85rem;">Winter collection -50% off</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            style="height:220px; background: url('images/add2.jpg') center/cover; border-radius:var(--radius); position:relative; overflow:hidden;">
+            <div
+              style="position:absolute; inset:0; background:rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <h4 class="text-white fw-800 mb-1">New Footwear</h4>
+              <p class="text-white-50 mb-0" style="font-size:.85rem;">Spring / Summer 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            style="height:220px; background: url('images/add3.jpg') center/cover; border-radius:var(--radius); position:relative; overflow:hidden;">
+            <div
+              style="position:absolute; inset:0; background:rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <h4 class="text-white fw-800 mb-1">T-Shirts</h4>
+              <p class="text-white-50 mb-0" style="font-size:.85rem;">New trendy prints</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     NEWSLETTER
+═══════════════════════════════════════════════════ -->
+  <section class="py-5" id="contact">
+    <div class="container">
+      <div class="newsletter-section">
+        <div class="section-label">Stay Updated</div>
+        <h2 class="section-title">Sign Up for Newsletters</h2>
+        <p class="section-sub mb-4">Get email updates about our latest shop and <strong>special offers</strong></p>
+        <form class="d-flex justify-content-center flex-wrap gap-0" onsubmit="return false;">
+          <input type="email" placeholder="Your email address" style="width:280px;" id="newsletter-email">
+          <button type="submit" class="btn-send" onclick="subscribeNewsletter()">Subscribe</button>
+        </form>
+        <p id="newsletter-msg" class="mt-3 text-brand" style="display:none; font-weight:600;">🎉 You're subscribed!
+          Welcome to Modiva.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+  <footer class="modiva-footer" id="about">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <div class="brand-name mb-2">Modiva</div>
+          <p style="font-size:.88rem;">Premium fashion for the modern woman. Quality, style, and confidence — all in one
+            place.</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>About</h6>
+          <a href="#">About Us</a>
+          <a href="#">Delivery Info</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>My Account</h6>
+          <a href="login.html">Sign In</a>
+          <a href="cart.html">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+        </div>
+        <div class="col-lg-2">
+          <h6>Contact</h6>
+          <p style="font-size:.85rem;"><i class="fas fa-map-marker-alt me-2 text-brand"></i>562 Wellington Rd, San
+            Francisco</p>
+          <p style="font-size:.85rem;"><i class="fas fa-phone me-2 text-brand"></i>+01 2222 365</p>
+          <p style="font-size:.85rem;"><i class="fas fa-clock me-2 text-brand"></i>Mon–Sat, 10am–6pm</p>
+        </div>
+        <div class="col-lg-3">
+          <h6>Secure Payment</h6>
+          <p style="font-size:.82rem;">Trusted payment gateways</p>
+          <div class="payment-icons mt-2">
+            <img src="images/visa-removebg-preview.png" alt="Visa">
+            <img src="images/mastercard-removebg-preview.png" alt="Mastercard">
+            <img src="images/maestro-removebg-preview.png" alt="Maestro">
+            <img src="images/paypal2-removebg-preview.png" alt="PayPal">
+          </div>
+          <h6 class="mt-4">Install App</h6>
+          <div class="d-flex gap-2 mt-2">
+            <a href="#"
+              style="background:rgba(255,255,255,.1); border-radius:8px; padding:.5rem .8rem; color:#fff; font-size:.8rem; text-decoration:none;">
+              <i class="fab fa-apple me-1"></i>App Store
+            </a>
+            <a href="#"
+              style="background:rgba(255,255,255,.1); border-radius:8px; padding:.5rem .8rem; color:#fff; font-size:.8rem; text-decoration:none;">
+              <i class="fab fa-google-play me-1"></i>Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>© 2025 Modiva. All rights reserved.</span>
+        <span>Designed with <i class="fas fa-heart text-danger"></i> for fashion lovers</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+     CART OFFCANVAS
+═══════════════════════════════════════════════════ -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" style="width:380px;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"><i class="fa-solid fa-bag-shopping me-2"></i>Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body" id="offcanvas-cart-body">
+      <div class="empty-state">
+        <div class="empty-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <p>Your cart is empty</p>
+        <a href="shop.html" class="btn btn-success rounded-pill px-4">Start Shopping</a>
+      </div>
+    </div>
+    <div class="p-3 border-top" id="offcanvas-cart-footer" style="display:none;">
+      <div class="d-flex justify-content-between fw-700 mb-3">
+        <span>Total</span>
+        <span class="text-brand" id="offcanvas-total">$0.00</span>
+      </div>
+      <a href="cart.html" class="btn btn-success w-100 rounded-pill">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Firebase + page logic (ES modules) -->
+  <script type="module">
+    import { listenToProducts } from './js/products.js';
+    import { addToCart, getCart, updateCartBadge, getCartTotal } from './js/cart.js';
+    import { watchAuthState, logOut } from './js/auth.js';
+
+    // ── Auth UI ─────────────────────────────────────────────────
+    watchAuthState((user) => {
+      const link = document.getElementById('auth-nav-link');
+      const text = document.getElementById('auth-nav-text');
+      if (user && link && text) {
+        text.textContent = user.email.split('@')[0];
+        link.href = '#';
+        link.onclick = async () => { await logOut(); location.reload(); };
+      }
+    });
+
+    // ── Render products ──────────────────────────────────────────
+    function createProductCard(p) {
+      const stars = Array.from({ length: 5 }, (_, i) =>
+        `<i class="fa-${i < Math.round(p.rating || 5) ? 'solid' : 'regular'} fa-star"></i>`).join('');
+
+      return `
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="${p.imageUrl || 'images/new1.jpg'}" alt="${p.name}" loading="lazy">
+          ${p.isNew ? '<span class="product-badge">New</span>' : ''}
+        </div>
+        <div class="card-body">
+          <p class="brand">${p.brand || p.category || 'Modiva'}</p>
+          <h6 class="product-name">${p.name}</h6>
+          <div class="stars">${stars}</div>
+          <div class="product-footer">
+            <span class="product-price">$${(+p.price).toFixed(2)}</span>
+            <button class="btn-add-cart" onclick="window.addProductToCart('${p.id}','${p.name.replace(/'/g, "\\'")}',${p.price},'${p.imageUrl || ''}','${p.category || ''}')">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+    }
+
+    // Global add-to-cart (called from inline onclick)
+    window.addProductToCart = function (id, name, price, imageUrl, category) {
+      addToCart({ id, name, price: +price, imageUrl, category });
+      updateCartBadge();
+      renderCartOffcanvas();
+    };
+
+    // ── Cart Offcanvas ───────────────────────────────────────────
+    function renderCartOffcanvas() {
+      const cart = getCart();
+      const body = document.getElementById('offcanvas-cart-body');
+      const footer = document.getElementById('offcanvas-cart-footer');
+      const totalEl = document.getElementById('offcanvas-total');
+
+      if (!cart.length) {
+        body.innerHTML = `<div class="empty-state"><div class="empty-icon"><i class="fa-solid fa-bag-shopping"></i></div><p>Your cart is empty</p><a href="shop.html" class="btn btn-success rounded-pill px-4">Start Shopping</a></div>`;
+        if (footer) footer.style.display = 'none';
+        return;
+      }
+
+      body.innerHTML = cart.map(item => `
+    <div class="cart-item-card">
+      <img src="${item.imageUrl || 'images/new1.jpg'}" alt="${item.name}">
+      <div style="flex:1">
+        <div style="font-weight:600; font-size:.9rem;">${item.name}</div>
+        <div style="font-size:.8rem; color:var(--muted);">${item.category || ''}</div>
+        <div style="font-weight:700; color:var(--brand); margin-top:.3rem;">$${(item.price * item.qty).toFixed(2)}</div>
+      </div>
+      <div style="text-align:right;">
+        <span style="font-size:.8rem; background:#f0f0f0; padding:.2rem .7rem; border-radius:50px;">×${item.qty}</span>
+      </div>
+    </div>`).join('');
+
+      if (totalEl) totalEl.textContent = `$${getCartTotal().toFixed(2)}`;
+      if (footer) footer.style.display = 'block';
+    }
+
+    document.getElementById('cartOffcanvas')?.addEventListener('show.bs.offcanvas', renderCartOffcanvas);
+
+    // ── Active filter ────────────────────────────────────────────
+    let allProducts = [];
+    let currentCat = 'all';
+
+    document.querySelectorAll('#featured-filter .pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#featured-filter .pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        renderFeatured();
+      });
+    });
+
+    function renderFeatured() {
+      const grid = document.getElementById('featured-products-grid');
+      if (!grid) return;
+      const filtered = currentCat === 'all'
+        ? allProducts.slice(0, 8)
+        : allProducts.filter(p => (p.category || '').toLowerCase() === currentCat).slice(0, 8);
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="empty-state col-12"><div class="empty-icon"><i class="fa-solid fa-shirt"></i></div><p>No products in this category yet</p></div>`;
+        return;
+      }
+      grid.innerHTML = filtered.map(createProductCard).join('');
+    }
+
+    // ── Firestore real-time listener ─────────────────────────────
+    listenToProducts((products) => {
+      allProducts = products;
+
+      // Featured section
+      const loadingFeat = document.getElementById('products-loading');
+      if (loadingFeat) loadingFeat.style.display = 'none';
+      renderFeatured();
+
+      // New arrivals (latest 8)
+      const loadingNew = document.getElementById('new-products-loading');
+      if (loadingNew) loadingNew.style.display = 'none';
+      const newGrid = document.getElementById('new-products-grid');
+      if (newGrid) {
+        const latest = products.slice(0, 8);
+        newGrid.innerHTML = latest.length
+          ? latest.map(p => { p.isNew = true; return createProductCard(p); }).join('')
+          : `<div class="empty-state col-12"><div class="empty-icon"><i class="fa-solid fa-shirt"></i></div><p>New arrivals coming soon</p></div>`;
+      }
+
+      updateCartBadge();
+    });
+
+    // ── Newsletter ───────────────────────────────────────────────
+    window.subscribeNewsletter = function () {
+      const email = document.getElementById('newsletter-email').value.trim();
+      if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+      document.getElementById('newsletter-msg').style.display = 'block';
+      document.getElementById('newsletter-email').value = '';
+    };
+
+    // Init badge
+    updateCartBadge();
+  </script>
+</body>
+
+</html>
